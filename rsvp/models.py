@@ -54,3 +54,17 @@ class HomeCarousel(models.Model):
 
     def __str__(self):
         return self.image_url
+
+
+class VillaCarousel(models.Model):
+    """
+    Stores the image URLs for the homepage carousel
+    """
+    image_url = models.CharField(blank=False, null=True, max_length=255)
+
+    class Meta:
+        verbose_name = 'Image'
+        verbose_name_plural = 'Images'
+
+    def __str__(self):
+        return self.image_url
