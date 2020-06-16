@@ -46,25 +46,25 @@ class HomeCarousel(models.Model):
     """
     Stores the image URLs for the homepage carousel
     """
-    image_url = models.CharField(blank=False, null=True, max_length=255)
+    image = models.ImageField(upload_to='carousel/villa/')
 
     class Meta:
         verbose_name = 'Image'
         verbose_name_plural = 'Images'
 
     def __str__(self):
-        return self.image_url
+        return self.image
 
 
 class VillaCarousel(models.Model):
     """
     Stores the image URLs for the homepage carousel
     """
-    image_url = models.CharField(blank=False, null=True, max_length=255)
+    image = models.ImageField(upload_to='carousel/home/')
 
     class Meta:
         verbose_name = 'Image'
         verbose_name_plural = 'Images'
 
     def __str__(self):
-        return self.image_url
+        return self.image

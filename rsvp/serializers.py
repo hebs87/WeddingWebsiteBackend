@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import RSVP, HomeCarousel
+from .models import RSVP, HomeCarousel, VillaCarousel
 
 
 class RSVPSerializer(serializers.ModelSerializer):
@@ -18,4 +18,13 @@ class HomeCarouselSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = HomeCarousel
-        fields = ('id', 'image_url')
+        fields = ('id', 'image')
+
+
+class VillaCarouselSerializer(serializers.ModelSerializer):
+    """
+    Serializes the HomeCarousel image url and returns as JSON
+    """
+    class Meta:
+        model = VillaCarousel
+        fields = ('id', 'image')
