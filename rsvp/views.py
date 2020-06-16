@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from rest_framework import viewsets
-from .models import RSVP, HomeCarousel
-from .serializers import RSVPSerializer, HomeCarouselSerializer
+from .models import RSVP, HomeCarousel, VillaCarousel
+from .serializers import RSVPSerializer, HomeCarouselSerializer, VillaCarouselSerializer
 
 
 # Create your views here.
@@ -13,3 +13,8 @@ class RSVPViewSet(viewsets.ModelViewSet):
 class HomeCarouselViewSet(viewsets.ModelViewSet):
     queryset = HomeCarousel.objects.all()
     serializer_class = HomeCarouselSerializer
+
+
+class VillaCarouselViewSet(viewsets.ModelViewSet):
+    queryset = VillaCarousel.objects.all()
+    serializer_class = VillaCarouselSerializer
