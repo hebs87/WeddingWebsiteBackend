@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('sitepanel/', admin.site.urls),
-    path('reply', include('rsvp.urls'))
+    path('reply/', include('rsvp.urls'))
 ]
