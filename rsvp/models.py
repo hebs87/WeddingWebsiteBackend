@@ -40,3 +40,17 @@ class RSVP(models.Model):
     def __str__(self):
         return "{0} - {1}, {2} can't make it".format(
             self.guest_name, self.attending, self.not_attending)
+
+
+class HomeCarousel(models.Model):
+    """
+    Stores the image URLs for the homepage carousel
+    """
+    image_url = models.CharField(blank=False, null=True, max_length=255)
+
+    class Meta:
+        verbose_name = 'Image'
+        verbose_name_plural = 'Images'
+
+    def __str__(self):
+        return self.image_url
