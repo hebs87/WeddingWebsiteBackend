@@ -49,11 +49,8 @@ class HomeCarousel(models.Model):
     image = models.ImageField(upload_to='carousel/villa/')
 
     class Meta:
-        verbose_name = 'Image'
-        verbose_name_plural = 'Images'
-
-    def __str__(self):
-        return self.image
+        verbose_name = 'Home Carousel Image'
+        verbose_name_plural = 'Home Carousel Images'
 
 
 class VillaCarousel(models.Model):
@@ -63,8 +60,5 @@ class VillaCarousel(models.Model):
     image = models.ImageField(upload_to='carousel/home/')
 
     class Meta:
-        verbose_name = 'Image'
-        verbose_name_plural = 'Images'
-
-    def __str__(self):
-        return self.image
+        verbose_name = 'Villa Carousel Image'
+        verbose_name_plural = 'Villa Carousel Images'
