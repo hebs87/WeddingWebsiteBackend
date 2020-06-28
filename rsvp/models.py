@@ -9,11 +9,11 @@ class RSVP(models.Model):
     """
     guest_name = models.CharField(max_length=27, blank=False)
     attending = models.CharField(max_length=19, blank=False)
-    not_attending = models.CharField(max_length=100, blank=False, null=True)
-    favourite_song = models.CharField(max_length=100, blank=False, null=True)
-    favourite_drink = models.CharField(max_length=100, blank=False, null=True)
-    dietary_requirements = models.CharField(max_length=100, blank=False, null=True)
-    additional_info = models.TextField(max_length=2000, blank=False, null=True)
+    not_attending = models.CharField(max_length=100, blank=False)
+    favourite_song = models.CharField(max_length=100, blank=False)
+    favourite_drink = models.CharField(max_length=100, blank=False)
+    dietary_requirements = models.CharField(max_length=100, blank=False)
+    additional_info = models.TextField(max_length=2000, blank=False)
 
     class Meta:
         verbose_name = 'RSVP'
