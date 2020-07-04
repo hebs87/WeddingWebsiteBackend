@@ -145,8 +145,7 @@ AWS_DEFAULT_ACL = None
 
 # Static Files Settings
 STATICFILES_LOCATION = "static"
-# STATICFILES_STORAGE = "custom_storages.StaticStorage"
-STATICFILES_STORAGE = ""
+STATICFILES_STORAGE = "custom_storages.StaticStorage"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
