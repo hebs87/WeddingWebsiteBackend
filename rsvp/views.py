@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from rest_framework import viewsets
 from .models import RSVP, HomeCarousel, VillaCarousel
 from .serializers import RSVPSerializer, HomeCarouselSerializer, VillaCarouselSerializer
@@ -18,3 +18,16 @@ class HomeCarouselViewSet(viewsets.ModelViewSet):
 class VillaCarouselViewSet(viewsets.ModelViewSet):
     queryset = VillaCarousel.objects.all()
     serializer_class = VillaCarouselSerializer
+
+
+def home(request):
+    """
+    Renders home page
+    """
+    details = RSVP.objects.all()
+
+    context = {
+        'details': details
+    }
+
+    return render(request, 'index.html', context)
