@@ -28,7 +28,7 @@ class HomeCarousel(models.Model):
     """
     Stores the image URLs for the homepage carousel
     """
-    image = models.ImageField(upload_to='carousel/villa/')
+    image = models.ImageField(upload_to='carousel/home/')
 
     class Meta:
         verbose_name = 'Home Carousel Image'
@@ -39,7 +39,7 @@ class VillaCarousel(models.Model):
     """
     Stores the image URLs for the homepage carousel
     """
-    image = models.ImageField(upload_to='carousel/home/')
+    image = models.ImageField(upload_to='carousel/villa/')
 
     class Meta:
         verbose_name = 'Villa Carousel Image'
