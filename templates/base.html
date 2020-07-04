@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kimmy & Sunny{% block title %}{% endblock %}</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+  <!-- FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <!-- Link for Favicon -->
+  <link rel="icon" sizes="192x192" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+</head>
+<body>
+
+<header class="container-fluid">
+  <!-- NAVBAR -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="{% url 'home' %}" class="brand-logo collection-item avatar" aria-label="Logo and link to home page">
+        Kimmy & Sunny
+      </a>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container-fluid center-align">
+  {% block content %}
+  {% endblock %}
+</main>
+
+<!--FOOTER-->
+<footer class="page-footer container-fluid">
+  <div class="container">
+    <div class="row center-align">
+      <div class="col s12">
+        <p>&copy; Kimmy &amp; Sunny {% now 'Y' %}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery script tag -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Materialize script tag -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

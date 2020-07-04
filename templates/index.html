@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | Replies{% endblock %}
+
+{% block content %}
+
+  <div class="guests-header-wrapper">
+    <div class="tag">
+      <h1 class="page-title center-align">Guests</h1>
+      <h5 class="title-helper center-align italic">Who's coming?</h5>
+    </div>
+    <img class="responsive-image guests-header-img" src="{% static 'images/wedding-guests.jpg' %}" alt="Wedding Guests">
+  </div>
+
+  <div class="row center-align text">
+    <!-- Attending Section -->
+    <div class="col s12 attending-wrapper">
+      <h3 class="dancing-script">Who Can Make It?</h3>
+      {% if details %}
+        {% for detail in details %}
+          {% if detail.attending == "Yes" %}
+            <p>
+              <span class="bold">Guest / Party:</span>
+              <span class="italic">{{ detail.guest_name }}</span>
+              <br/>
+              {% if detail.not_attending !=  "N/A" %}
+                <span class="bold">Not Coming:</span>
+                <span class="italic">{{ detail.not_attending }}</span>
+                <br/>
+              {% endif %}
+              <span class="bold">Favourite Song:</span>
+              <span class="italic">{{ detail.favourite_song }}</span>
+              <br/>
+              <span class="bold">Favourite Drink:</span>
+              <span class="italic">{{ detail.favourite_drink }}</span>
+              <br/>
+              {% if detail.dietary_requirements !=  "N/A" %}
+                <span class="bold">Dietary Requirements:</span>
+                <span class="italic">{{ detail.dietary_requirements }}</span>
+                <br/>
+              {% endif %}
+              {% if detail.additional_info !=  "N/A" %}
+                <span class="bold">Additional Info:</span>
+                <span class="italic">{{ detail.additional_info }}</span>
+                <br/>
+              {% endif %}
+            </p>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <p class="italic">No attending guests have replied yet!</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row center-align text">
+    <!-- Not Attending Section -->
+    <div class="col s12 not-attending-wrapper">
+      <h3 class="dancing-script">Who Can't Make It?</h3>
+      {% if details %}
+        {% for detail in details %}
+          {% if detail.attending == "No" %}
+            <p>
+              <span class="bold">Guest / Party:</span>
+              <span class="italic">{{ detail.guest_name }}</span>
+              <br/>
+              <span class="bold">Favourite Song:</span>
+              <span class="italic">{{ detail.favourite_song }}</span>
+              <br/>
+              {% if detail.additional_info !=  "N/A" %}
+                <span class="bold">Additional Info:</span>
+                <span class="italic">{{ detail.additional_info }}</span>
+                <br/>
+              {% endif %}
+            </p>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <p class="italic">No non-attending guests have replied yet!</p>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
