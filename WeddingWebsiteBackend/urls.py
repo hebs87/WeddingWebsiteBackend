@@ -17,10 +17,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import path, include
+from rsvp.views import home
 
 urlpatterns = [
     path('sitepanel/', admin.site.urls),
-    path('reply/', include('rsvp.urls'))
+    path('', home, name='home'),
+    path('reply/', include('rsvp.urls')),
 ]
 
 urlpatterns += static(
