@@ -9,4 +9,5 @@ router.register('villa-carousel', views.VillaCarouselViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('', home, name='home'),
 ]
