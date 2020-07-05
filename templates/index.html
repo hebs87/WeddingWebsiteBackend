@@ -20,29 +20,33 @@
         {% for detail in attending %}
           {% if detail.attending == "Yes" %}
             <p>
-              <span class="content-field-name">Guest / Party:</span>
-              <span class="content-value">{{ detail.guest_name }}</span>
-              <br/>
+              <span class="content-field-name">
+                Guest/Party:
+                <span class="content-value">{{ detail.guest_name }}</span>
+              </span>
               {% if detail.not_attending !=  "N/A" %}
                 <span class="content-field-name">Not Coming:</span>
                 <span class="content-value">{{ detail.not_attending }}</span>
-                <br/>
               {% endif %}
-              <span class="content-field-name">Favourite Song:</span>
-              <span class="content-value">{{ detail.favourite_song }}</span>
-              <br/>
-              <span class="content-field-name">Favourite Drink:</span>
-              <span class="content-value">{{ detail.favourite_drink }}</span>
-              <br/>
+              <span class="content-field-name">
+                Favourite Song:
+                <span class="content-value">{{ detail.favourite_song }}</span>
+              </span>
+              <span class="content-field-name">
+                Favourite Drink:
+                <span class="content-value">{{ detail.favourite_drink }}</span>
+              </span>
               {% if detail.dietary_requirements !=  "N/A" %}
-                <span class="content-field-name">Dietary Requirements:</span>
-                <span class="content-value">{{ detail.dietary_requirements }}</span>
-                <br/>
+                <span class="content-field-name">
+                  Dietary Requirements:
+                  <span class="content-value">{{ detail.dietary_requirements }}</span>
+                </span>
               {% endif %}
               {% if detail.additional_info !=  "N/A" %}
-                <span class="content-field-name">Additional Info:</span>
-                <span class="content-value">{{ detail.additional_info }}</span>
-                <br/>
+                <span class="content-field-name">
+                  Additional Info:
+                  <span class="content-value">{{ detail.additional_info }}</span>
+                </span>
               {% endif %}
             </p>
           {% endif %}
@@ -61,31 +65,37 @@
         {% for detail in not_attending %}
           {% if detail.attending == "No" %}
             <p>
-              <span class="content-field-name">Guest / Party:</span>
-              <span class="content-value">{{ detail.guest_name }}</span>
-              <br/>
+              <span class="content-field-name">
+                Guest/Party:
+                <span class="content-value">{{ detail.guest_name }}</span>
+              </span>
               {% if detail.not_attending !=  "N/A" %}
-                <span class="content-field-name">Not Coming:</span>
-                <span class="content-value">{{ detail.not_attending }}</span>
-                <br/>
+                <span class="content-field-name">
+                  Not Coming:
+                  <span class="content-value">{{ detail.not_attending }}</span>
+                </span>
               {% endif %}
-              <span class="content-field-name">Favourite Song:</span>
-              <span class="content-value">{{ detail.favourite_song }}</span>
-              <br/>
+              <span class="content-field-name">
+                Favourite Song:
+                <span class="content-value">{{ detail.favourite_song }}</span>
+              </span>
               {% if detail.favourite_drink != 'N/A' %}
-                <span class="content-field-name">Favourite Drink:</span>
-                <span class="content-value">{{ detail.favourite_drink }}</span>
+                <span class="content-field-name">
+                  Favourite Drink:
+                  <span class="content-value">{{ detail.favourite_drink }}</span>
+                </span>
               {% endif %}
-              <br/>
               {% if detail.dietary_requirements !=  "N/A" %}
-                <span class="content-field-name">Dietary Requirements:</span>
-                <span class="content-value">{{ detail.dietary_requirements }}</span>
-                <br/>
+                <span class="content-field-name">
+                  Dietary Requirements:
+                  <span class="content-value">{{ detail.dietary_requirements }}</span>
+                </span>
               {% endif %}
               {% if detail.additional_info !=  "N/A" %}
-                <span class="content-field-name">Additional Info:</span>
-                <span class="content-value">{{ detail.additional_info }}</span>
-                <br/>
+                <span class="content-field-name">
+                  Additional Info:
+                  <span class="content-value">{{ detail.additional_info }}</span>
+                </span>
               {% endif %}
             </p>
           {% endif %}
