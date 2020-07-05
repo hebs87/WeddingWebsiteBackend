@@ -72,7 +72,7 @@
               <span class="content-field-name">Favourite Song:</span>
               <span class="content-value">{{ detail.favourite_song }}</span>
               <br/>
-              {% if detail.favourite_drink %}
+              {% if detail.favourite_drink != 'N/A' %}
                 <span class="content-field-name">Favourite Drink:</span>
                 <span class="content-value">{{ detail.favourite_drink }}</span>
               {% endif %}
