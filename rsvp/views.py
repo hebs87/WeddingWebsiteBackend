@@ -24,10 +24,12 @@ def home(request):
     """
     Renders home page
     """
-    details = RSVP.objects.all()
+    attending = RSVP.objects.filter(attending='Yes')
+    not_attending = RSVP.objects.filter(attending='No')
 
     context = {
-        'details': details
+        'attending': attending,
+        'not_attending': not_attending,
     }
 
     return render(request, 'index.html', context)

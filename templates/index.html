@@ -16,8 +16,8 @@
     <!-- Attending Section -->
     <div class="col s12">
       <h3 class="content-heading">Who's Coming?</h3>
-      {% if details %}
-        {% for detail in details %}
+      {% if attending %}
+        {% for detail in attending %}
           {% if detail.attending == "Yes" %}
             <p>
               <span class="content-field-name">Guest / Party:</span>
@@ -57,8 +57,8 @@
     <!-- Not Attending Section -->
     <div class="col s12">
       <h3 class="content-heading">Who's Not Coming?</h3>
-      {% if details %}
-        {% for detail in details %}
+      {% if not_attending %}
+        {% for detail in not_attending %}
           {% if detail.attending == "No" %}
             <p>
               <span class="content-field-name">Guest / Party:</span>
