@@ -60,6 +60,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "https://kimmyandsunny-wedding-website.herokuapp.com/"
 ]
 
 ROOT_URLCONF = 'WeddingWebsiteBackend.urls'
