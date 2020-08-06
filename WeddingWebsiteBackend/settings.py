@@ -58,11 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-    "http://localhost:5000",
-    "https://kimmyandsunny-wedding-website.herokuapp.com/"
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'WeddingWebsiteBackend.urls'
 
