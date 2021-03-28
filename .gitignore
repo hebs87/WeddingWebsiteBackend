@@ -4,7 +4,6 @@ htmlcov/
 .coverage
 .coveragerc
 venv/
-*.sqlite3
 media
 static
 .idea/
